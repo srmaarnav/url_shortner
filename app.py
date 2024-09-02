@@ -18,9 +18,14 @@ def shorten_url():
     """Create a short URL."""
     data = request.json
     long_url = data.get('long_url')
+
     
     if not long_url:
         return jsonify({"error": "Missing long_url"}), 400
+
+    for key,val in url_mapping.items():
+        if long_url == val:
+            return jsonify({"error": "Already entered url"}), 400
 
     short_code = generate_short_url()
     short_url = base_url + short_code
