@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 import random
 import string
+import validators
 
 app = Flask(__name__)
 
@@ -22,6 +23,9 @@ def shorten_url():
     
     if not long_url:
         return jsonify({"error": "Missing long_url"}), 400
+    
+    if not validators.url(long_url):
+        return jsonify({"error": "Invalid URL"}), 400
 
     for key,val in url_mapping.items():
         if long_url == val:

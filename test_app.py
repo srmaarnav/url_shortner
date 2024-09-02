@@ -29,6 +29,18 @@ class URLShortenerTests(unittest.TestCase):
         data = json.loads(response.data)
         self.assertIn('error', data)
 
+    def test_shorten_url_invalid(self):
+        """Test the URL shortening functionality with an invalid URL."""
+        response = self.app.post('/shorten', 
+            data=json.dumps({"long_url": "invalid-url"}),
+            content_type='application/json'
+        )
+        self.assertEqual(response.status_code, 400)
+        data = json.loads(response.data)
+        self.assertIn('error', data)
+        self.assertEqual(data['error'], 'Invalid URL')
+
+    
     def test_get_long_url(self):
         """Test retrieving the long URL from a short code."""
         # First, shorten a URL to get a short code
