@@ -107,11 +107,11 @@ For the **Get** request (list all):
 ## API Endpoints
 
 
-    | Endpoint       | Method | Description                                    |
-    |----------------|--------|------------------------------------------------|
-    | /shorten       | POST   | Create a short URL from a long URL.            |
-    | /<short_code>  | GET    | Retrieve the long URL corresponding to the short code. |
-    | /urls          | GET    | List all stored URLs.                          |
+| Endpoint       | Method | Description                                    |
+|----------------|--------|------------------------------------------------|
+| /shorten       | POST   | Create a short URL from a long URL.            |
+| /<short_code>  | GET    | Retrieve the long URL corresponding to the short code. |
+| /urls          | GET    | List all stored URLs.                          |
     
 
 ## Running Tests
