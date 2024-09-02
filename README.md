@@ -121,3 +121,5 @@ To run all the tests defined, ensure that the application is not running in the 
 ```
     python -m unittest test_app 
 ```
+It gives:
+![Unit_Case](images/unit_test.png)
