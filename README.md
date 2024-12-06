@@ -1,6 +1,6 @@
 # Flask URL Shortener
 
-A simple URL shortener built with Flask that allows users to shorten long URLs, retrieve the original URLs, and list all stored URLs. This application is entirely API-based and does not use a database, storing data in memory.
+A simple URL shortener built with Flask that allows users to shorten long URLs, retrieve the original URLs, and list all stored URLs. This application is entirely API-based and does not use a database, storing data in memory as a key-value pair.
 
 ## Table of Contents
 
