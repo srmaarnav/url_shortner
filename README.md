@@ -103,6 +103,10 @@ For the **Get** request (list all):
 
 ![GET_All_Response](images/get_all_res.png)
 
+**Dockerized Run**
+The application can also be run as docker container. For that, make sure docker is installed on your device, and then simply run the command:
+`docker compose up -d`
+and the application is running at port 5000.
 
 ## API Endpoints
 

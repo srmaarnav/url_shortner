@@ -2,12 +2,17 @@ from flask import Flask, request, jsonify
 import random
 import string
 import validators
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from a .env file
+load_dotenv()
 
 app = Flask(__name__)
 
 # In-memory storage for URLs
 url_mapping = {}
-base_url = "http://127.0.0.1:5000/"
+base_url = os.getenv("BASE_URL", "http://127.0.0.1:5000/")
 
 def generate_short_url(length=6):
     """Generate a random short URL."""
@@ -55,4 +60,4 @@ def list_urls():
     return jsonify(url_mapping), 200
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0')

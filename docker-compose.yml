@@ -1,0 +1,9 @@
+services:
+  url_shortener:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      FLASK_ENV: development
