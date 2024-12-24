@@ -1,4 +1,8 @@
 __pycache__
 images
-.gitignore
+.git*
 .dockerignore
+Dockerfile
+docker-compose.yml
+README.md
+venv
